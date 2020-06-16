@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url('../images/bg.jpg');
+  color: #fff;
+}
+
+header {
+  height: 8vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  max-width: 100%;
+}
+#main-nav{
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#menu li{
+  display: inline-block;
+  padding: 23px 0;
+  margin: 0 12.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+main{
+  position: relative;
+  height: 92vh;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.pizza{
+  max-width: 100%;
+  padding-top: 50px;
+  display: none;
+}
+.right-col{
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 55%;
+  right: 0;
+}
+.left-col{
+  opacity: 0;
+  position: absolute;
+  width: 35%;
+  left: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo-main{
+  height: 85px;
+  width: auto;
+}
+.left-col p{
+  font-family: 'Ovo', serif;
+  font-size: 25px;
+  line-height: 1.5;
+}
+.buttons{
+  margin-top: 60px;
+}
+.btn{
+  border: none;
+  background: none;
+  width: 180px;
+  height: 42px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 24px;
+  cursor: pointer;
+}
+.btn:active{
+  outline-color: #f54547;
+}
+.btn:visited{
+  outline-color: none;
+}
+.btn-light{
+  color: #000;
+  background-color: #fff;
+}
+
+.btn-border{
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+
+footer{
+  position: relative;
+}
+.social-icons{
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+}
+.social-icons a > img{
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+.copyright{
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  color: #9f9fa094;
+}
+@media all and (max-width: 1200px){
+  .container{
+    max-width: 1000px;
+  }
+  .btn{
+    width: 140px;
+  }
+}
+@media all and (max-width: 1024px ){
+  .container{
+    max-width: 900px;
+  }
+  .btn{
+    width: 130px;
+  }
+}

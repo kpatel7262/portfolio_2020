@@ -1,0 +1,142 @@
+html {
+	box-sizing:border-box;
+}
+*,*:before, *:after{
+	box-sizing:inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+height:100vh;
+background:url('../images/breakfast/background.jpg');
+color:#fff;
+margin:0;
+font-family: 'Open Sans', sans-serif;
+}
+
+/*header, breakfast, dessert*/
+.flex-header, .flex-nav, .menu-nav{
+	display:flex;
+}
+.flex-breakfast, .flex-drinks,.flex-dessert,.flex-lunch, .flex-dinner,.flex-specials {
+	display:flex;
+	flex-flow:row wrap;
+}
+.flex-header li, .flex-nav li, .menu-nav li{
+	list-style:none;
+	margin-left:0.7em;
+}
+.flex-header{
+	justify-content:space-between;
+}
+.menu-type{
+	flex:1 0 0;
+	padding:1em;
+	background-color:transparent;
+	text-align:center;
+	border: 1px solid #fff;
+}
+.menu-type:hover{
+	cursor:pointer;
+}
+.flex-nav li{
+	padding: 23px 0;
+  margin: 0 12.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.flex-nav li a:hover{
+	border-bottom:1px solid #fff;
+	color:red;
+}
+div.menu-item{
+	text-transform:capitalize;
+}
+
+main{
+	padding-top:2em;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+#logo {
+	padding-top:15px;
+}
+#navigation{
+	align-self:center;
+}
+header{
+	height: 8vh;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+h1{
+	text-align:center;
+}
+h2{
+	text-align:center;
+	margin:1em 0;
+}
+h2:hover{
+		text-decoration:underline;
+		cursor:pointer;
+}
+ul li a {
+	text-decoration:none;
+	color:#ffffff;
+}
+
+.hidden{
+	display:none;
+}
+
+.flex-lunch li, .flex-dinner li, .flex-breakfast li, .flex-dessert li, .flex-drinks li,.flex-specials li{
+	flex:1 0 33.33%;
+	margin-bottom:1em;
+	list-style:none;
+}
+.flex-lunch li:nth-child(2n), .flex-dinner li:nth-child(2n), .flex-specials li:nth-child(2n){
+	border:1px solid #939699;
+}
+
+.flex-footer{
+	display:flex;
+	justify-content:space-between;
+	padding-top:4em;
+}
+.social-icons a > img{
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+.copyright{
+	color: #9f9fa094;
+	order:-1;
+}
+
+
+#openingstbl{
+	padding:3em;
+	margin-top:1em;
+	margin-bottom:6em;
+	border:1px solid black;
+}
+td{text-align:center;
+padding:1.5em;
+width:33%;
+border:1px solid #fff;
+}
+
+.jobtblheading{
+	text-transform:uppercase;
+	color:red;
+}

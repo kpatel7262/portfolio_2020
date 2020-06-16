@@ -1,0 +1,172 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../images/bg.jpg");
+  color: #fff;
+}
+
+header {
+  height: 8vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+  position:relative;  
+  left: 0;
+  top: 15px;
+  max-width: 100%;
+}
+
+#main-nav{
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#menu li{
+  display: inline-block;
+  padding: 23px 0;
+  margin: 0 12.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#menu li:hover{
+  border-bottom: 1px solid #fff;
+  color: #f54547;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height:55%;
+}
+
+#logo-main {
+    position:relative;
+    left:45%;
+    width:13%;
+    padding-top:7em;
+}
+
+.intro {
+    font-family:"Open Sans", sans-serif;
+    font-size:1.5em;
+    text-align:center;
+    margin-left:2em;
+}
+
+.intro:nth-child(3) {
+    font-size:1em;
+    margin-bottom:1.5em;
+}
+
+.form1 {
+    border:1px solid #fff;
+    width:50%;
+    height:40px;
+    padding:0.5em;
+    margin-bottom:1em;
+    margin-left:20em;
+}
+
+label {
+    font-family:"Open Sans", sans-serif;
+}
+
+input {
+    background-color:transparent;
+    border:none; 
+    color:#fff;
+    font-size:1em;
+}
+
+#message {
+    height:80px;
+}
+
+.flex-container {
+    display:flex;
+    flex-flow:nowrap;
+    width:50%;
+}
+
+#first-name {
+    flex:1 0 48%;
+}
+
+#last-name {
+    flex:1 0 49%;
+    margin-left:1em;
+}
+
+#contact-submit {
+    width:100px;
+    height:30px;
+    font-family:"open sans",sans-serif;
+    font-size:1em;
+    margin-left:35em;
+    margin-top:1em;
+}
+
+section {
+    font-family:"Open Sans",sans-serif;
+    text-align:center;
+    font-size:1.25em;
+    margin-top:1em;
+    margin-left:1.75em;
+}
+
+footer{
+  position: relative;  
+  padding-bottom: 45px;
+}
+
+.social-icons{
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+}
+.social-icons a > img{
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+.copyright{
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  color: #9f9fa094;
+}
+@media all and (max-width: 1200px){
+  .container{
+    max-width: 1000px;
+  }
+  .btn{
+    width: 140px;
+  }
+}
+@media all and (max-width: 1024px ){
+  .container{
+    max-width: 900px;
+  }
+  .btn{
+    width: 130px;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=devide-width">
+		<title>Christmas Tree</title>
+		<link rel="stylesheet" href="style.css">
+		
+		<!--<script rel="text/javascript" src="christmas.js"></script>-->
+		<link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas:400,700&display=swap" rel="stylesheet"> 
+		<script>
+			
+			function drag(event) {
+			  event.dataTransfer.setData("text", event.target.id);
+			}
+
+			function allowDrop(event) {
+			  event.preventDefault();
+			}
+
+			function drop(event) {
+			  event.preventDefault();
+			  var data = event.dataTransfer.getData("text");
+			  event.target.appendChild(document.getElementById(data));
+			}
+
+		</script>
+	</head>
+
+	<body>
+
+		<div id="lights">
+			<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+			<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+			<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+			<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+			<span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+		</div>
+		
+			<img src="images/snowflake(2).png" id="snowflake1" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake2" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake3" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake4" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake5" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake6" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake7" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake8" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake9" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake10" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake11" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake12" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake13" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake14" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake15" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake16" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake17" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake18" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake19" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake20" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake21" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake22" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake23" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake24" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake25" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake26" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake27" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake28" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake29" alt="snowflake" />
+			<img src="images/snowflake(2).png" id="snowflake30" alt="snowflake" />
+			
+		
+
+
+		<div id="heading">
+			<h1>Merry Christmas</h1>
+		</div>
+		
+		<div id="star"></div>
+		
+		<div class="tree" id="tree_id" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="tree_body" id="tree1"></div>
+			<div class="tree_body" id="tree2"></div>
+			<div class="tree_body" id="tree3"></div>
+			<div class="tree_leg"></div>
+		</div>
+
+		<div id="decorate">
+			<h2>Move them to decorate your christmas tree!</h2>
+				
+					<div class="bd1">
+						<div class="bulb b1" id="Bulb1" draggable="true" ondragstart="drag(event)"></div>
+					</div>
+					<div class="bd2">
+						<div class="bulb b2" id="Bulb2" draggable="true" ondragstart="drag(event)"></div>
+					</div>
+					<div class="bd3">
+						<div class="bulb b3" id="Bulb3" draggable="true" ondragstart="drag(event)"></div>
+					</div>
+					<div class="bd4">
+						<div class="bulb b4" id="Bulb4" draggable="true" ondragstart="drag(event)"></div>
+					</div>
+				
+		</div>
+		
+	</body>
+
+</html>
+
+
+
+
+<!--References-->
+<!--https://www.w3schools.com/html/html5_draganddrop.asp-->
+<!--https://www.w3schools.com/cssref/css3_pr_box-shadow.asp-->

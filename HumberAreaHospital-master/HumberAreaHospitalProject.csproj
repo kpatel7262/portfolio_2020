@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{651F0F09-6074-4C50-93DA-2A6205E5CA6E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HumberAreaHospitalProject</RootNamespace>
+    <AssemblyName>HumberAreaHospitalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44309</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ApplicationController.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
+    <Compile Include="Controllers\FAQCategoryController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeRemediesController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RemedySourceController.cs" />
+    <Compile Include="Controllers\SocialServiceClubsController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
+    <Compile Include="Controllers\DoctorController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\SurveyController.cs" />
+    <Compile Include="Controllers\SpecialityController.cs" />
+    <Compile Include="Data\HospitalContext.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004090252423_initial.cs" />
+    <Compile Include="Migrations\202004090252423_initial.Designer.cs">
+      <DependentUpon>202004090252423_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004100308025_Added_Job.cs" />
+    <Compile Include="Migrations\202004100308025_Added_Job.Designer.cs">
+      <DependentUpon>202004100308025_Added_Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004100356207_Added_Application.cs" />
+    <Compile Include="Migrations\202004100356207_Added_Application.Designer.cs">
+      <DependentUpon>202004100356207_Added_Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004100406407_Updated_Jobs.cs" />
+    <Compile Include="Migrations\202004100406407_Updated_Jobs.Designer.cs">
+      <DependentUpon>202004100406407_Updated_Jobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004100857493_added_author_article_volunteer.cs" />
+    <Compile Include="Migrations\202004100857493_added_author_article_volunteer.Designer.cs">
+      <DependentUpon>202004100857493_added_author_article_volunteer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004111049216_update_voluntee.cs" />
+    <Compile Include="Migrations\202004111049216_update_voluntee.Designer.cs">
+      <DependentUpon>202004111049216_update_voluntee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004111157220_Updated_Application.cs" />
+    <Compile Include="Migrations\202004111157220_Updated_Application.Designer.cs">
+      <DependentUpon>202004111157220_Updated_Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004112112292_updated_application.cs" />
+    <Compile Include="Migrations\202004112112292_updated_application.Designer.cs">
+      <DependentUpon>202004112112292_updated_application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004131936327_Added_FAQ_Category.cs" />
+    <Compile Include="Migrations\202004131936327_Added_FAQ_Category.Designer.cs">
+      <DependentUpon>202004131936327_Added_FAQ_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004132019092_Added_FAQ.cs" />
+    <Compile Include="Migrations\202004132019092_Added_FAQ.Designer.cs">
+      <DependentUpon>202004132019092_Added_FAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004132314067_updated_FAQ.cs" />
+    <Compile Include="Migrations\202004132314067_updated_FAQ.Designer.cs">
+      <DependentUpon>202004132314067_updated_FAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004132325229_updated_FAQ_Removed.cs" />
+    <Compile Include="Migrations\202004132325229_updated_FAQ_Removed.Designer.cs">
+      <DependentUpon>202004132325229_updated_FAQ_Removed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121837253_add-hr.cs" />
+    <Compile Include="Migrations\202004121837253_add-hr.Designer.cs">
+      <DependentUpon>202004121837253_add-hr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004121933002_add-socialserviceclubs.cs" />
+    <Compile Include="Migrations\202004121933002_add-socialserviceclubs.Designer.cs">
+      <DependentUpon>202004121933002_add-socialserviceclubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004131924055_Appointment_Staff.cs" />
+    <Compile Include="Migrations\202004131924055_Appointment_Staff.Designer.cs">
+      <DependentUpon>202004131924055_Appointment_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\FAQ.cs" />
+    <Compile Include="Models\FAQCategory.cs" />
+    <Compile Include="Models\HomeRemedies.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RemedySource.cs" />
+    <Compile Include="Models\SocialServiceClubs.cs" />
+    <Compile Include="Models\Speciality.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Survey.cs" />
+    <Compile Include="Models\ViewModels\AppointmentViewModel.cs" />
+    <Compile Include="Models\ViewModels\ListSurvey.cs" />
+    <Compile Include="Models\ViewModels\ShowJob.cs" />
+    <Compile Include="Models\ViewModels\UpdateArticle.cs" />
+    <Compile Include="Models\ViewModels\UpdateDoctor.cs" />
+    <Compile Include="Models\ViewModels\UpdateFAQController.cs" />
+    <Compile Include="Models\ViewModels\StaffSpecialty.cs" />
+    <Compile Include="Models\ViewModels\UpdateHomeRemedy.cs" />
+    <Compile Include="Models\ViewModels\ViewDoctor.cs" />
+    <Compile Include="Models\Volunteer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\list_style.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Doctors_CRUD1.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Doctors_CRUD3.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Doctor_CRUD2.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\ERDs.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Questions_CRUD2.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Question_Crud1.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Specialities_CRUD1.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Specialities_CRUD2.jpeg" />
+    <Content Include="ERD_WireFrames_Document\Anshuk_Aggarwal_WireFrames_ERD\Survey_Form.jpeg" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\HR-dlt-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\HR-list-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\HR-list-user.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\HR-new-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\HR-updt-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\HR-view-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\HR-view-user.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\RS-list-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\SSC-admin-user.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\SSC-dlt-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\SSC-list-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\SSC-list-user.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\SSC-view-admin.png" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\SSC-view-user.png" />
+    <Content Include="ERD_WireFrames_Document\MadhusudhanReddyKambham\ERD-FAQ.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include=".vs\config\applicationhost.config" />
+    <Content Include=".vs\HumberAreaHospitalProject\config\applicationhost.config" />
+    <Content Include=".vs\HumberAreaHospitalProject\v15\.suo" />
+    <Content Include=".vs\HumberAreaHospitalProject\v15\Server\sqlite3\db.lock" />
+    <Content Include=".vs\HumberAreaHospitalProject\v15\Server\sqlite3\storage.ide" />
+    <Content Include=".vs\HumberAreaHospitalProject\v15\Server\sqlite3\storage.ide-shm" />
+    <Content Include=".vs\HumberAreaHospitalProject\v15\Server\sqlite3\storage.ide-wal" />
+    <Content Include=".vs\HumberAreaHospitalProject\v16\Server\sqlite3\db.lock" />
+    <Content Include=".vs\HumberAreaHospitalProject\v16\Server\sqlite3\storage.ide" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ERD_WireFrames_Document\CynthiaLipinski\Wireframes_ERD_CynthiaLipinski.pdf" />
+    <Content Include="ERD_WireFrames_Document\HomeRemedies_SocialServiceClubs_Features\ERD-HomeRemedies-SSClubs.pdf" />
+    <Content Include="ERD_WireFrames_Document\Volunteer_Article_Feature\ERD_Model.pdf" />
+    <Content Include="ERD_WireFrames_Document\Volunteer_Article_Feature\Wireframes.pf.pdf" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Doctor\List.cshtml" />
+    <Content Include="Views\Doctor\New.cshtml" />
+    <Content Include="Views\Doctor\View.cshtml" />
+    <Content Include="Views\Doctor\Update.cshtml" />
+    <Content Include="Views\Doctor\Delete.cshtml" />
+    <Content Include="Views\Speciality\List.cshtml" />
+    <Content Include="Views\Speciality\New.cshtml" />
+    <Content Include="Views\Speciality\View.cshtml" />
+    <Content Include="Views\Speciality\Update.cshtml" />
+    <Content Include="Views\Speciality\Delete.cshtml" />
+    <Content Include="Views\Question\List.cshtml" />
+    <Content Include="Views\Question\New.cshtml" />
+    <Content Include="Views\Question\View.cshtml" />
+    <Content Include="Views\Question\Update.cshtml" />
+    <Content Include="Views\Question\Delete.cshtml" />
+    <Content Include="Views\Survey\Form.cshtml" />
+    <Content Include="Views\Survey\Thanks.cshtml" />
+    <Content Include="Views\Survey\List.cshtml" />
+    <Content Include="Views\Article\List.cshtml" />
+    <Content Include="Views\Article\View.cshtml" />
+    <Content Include="Views\Article\Create.cshtml" />
+    <Content Include="Views\Article\Update.cshtml" />
+    <Content Include="Views\Article\Delete.cshtml" />
+    <Content Include="Views\Author\List.cshtml" />
+    <Content Include="Views\Author\View.cshtml" />
+    <Content Include="Views\Author\Create.cshtml" />
+    <Content Include="Views\Author\Update.cshtml" />
+    <Content Include="Views\Author\Delete.cshtml" />
+    <Content Include="Views\Volunteer\List.cshtml" />
+    <Content Include="Views\Volunteer\View.cshtml" />
+    <Content Include="Views\Volunteer\Create.cshtml" />
+    <Content Include="Views\Volunteer\Update.cshtml" />
+    <Content Include="Views\Volunteer\Delete.cshtml" />
+    <Content Include="Views\Volunteer\Apply_today.cshtml" />
+    <Content Include="Views\Article\NewsPage.cshtml" />
+    <Content Include="Views\Job\List.cshtml" />
+    <Content Include="Views\Job\New.cshtml" />
+    <Content Include="Views\Job\Show.cshtml" />
+    <Content Include="Views\Job\Update.cshtml" />
+    <Content Include="Views\Application\List.cshtml" />
+    <Content Include="Views\Application\New.cshtml" />
+    <Content Include="Views\Job\User_Show.cshtml" />
+    <Content Include="Views\Job\User_Perspective_List.cshtml" />
+    <Content Include="Views\Application\Update.cshtml" />
+    <Content Include="Views\Application\Show.cshtml" />
+    <Content Include="Views\FAQCategory\List.cshtml" />
+    <Content Include="Views\FAQCategory\Show.cshtml" />
+    <Content Include="Views\FAQCategory\Update.cshtml" />
+    <Content Include="Views\FAQCategory\New.cshtml" />
+    <Content Include="Views\FAQ\New.cshtml" />
+    <Content Include="Views\FAQ\List.cshtml" />
+    <Content Include="Views\FAQ\Update.cshtml" />
+    <Content Include="Views\FAQ\Show.cshtml" />
+    <Content Include="Views\FAQ\User_view.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\HomeRemedies\Delete.cshtml" />
+    <Content Include="Views\HomeRemedies\List.cshtml" />
+    <Content Include="Views\HomeRemedies\New.cshtml" />
+    <Content Include="Views\HomeRemedies\Update.cshtml" />
+    <Content Include="Views\HomeRemedies\User_list.cshtml" />
+    <Content Include="Views\HomeRemedies\User_view.cshtml" />
+    <Content Include="Views\HomeRemedies\View.cshtml" />
+    <Content Include="Views\RemedySource\Delete.cshtml" />
+    <Content Include="Views\RemedySource\List.cshtml" />
+    <Content Include="Views\RemedySource\View.cshtml" />
+    <Content Include="Views\RemedySource\New.cshtml" />
+    <Content Include="Views\RemedySource\Update.cshtml" />
+    <Content Include="Views\SocialServiceClubs\View.cshtml" />
+    <Content Include="Views\SocialServiceClubs\Delete.cshtml" />
+    <Content Include="Views\SocialServiceClubs\List.cshtml" />
+    <Content Include="Views\SocialServiceClubs\New.cshtml" />
+    <Content Include="Views\SocialServiceClubs\Update.cshtml" />
+    <Content Include="Views\SocialServiceClubs\User_list.cshtml" />
+    <Content Include="Views\SocialServiceClubs\User_view.cshtml" />
+    <Content Include="Views\Staff\Create.cshtml" />
+    <Content Include="Views\Staff\Delete.cshtml" />
+    <Content Include="Views\Staff\List.cshtml" />
+    <Content Include="Views\Staff\Update.cshtml" />
+    <Content Include="Views\Appointment\Create.cshtml" />
+    <Content Include="Views\Appointment\Delete.cshtml" />
+    <Content Include="Views\Appointment\list.cshtml" />
+    <Content Include="Views\Appointment\Update.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004090252423_initial.resx">
+      <DependentUpon>202004090252423_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004100308025_Added_Job.resx">
+      <DependentUpon>202004100308025_Added_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004100356207_Added_Application.resx">
+      <DependentUpon>202004100356207_Added_Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004100406407_Updated_Jobs.resx">
+      <DependentUpon>202004100406407_Updated_Jobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004100857493_added_author_article_volunteer.resx">
+      <DependentUpon>202004100857493_added_author_article_volunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004111049216_update_voluntee.resx">
+      <DependentUpon>202004111049216_update_voluntee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004111157220_Updated_Application.resx">
+      <DependentUpon>202004111157220_Updated_Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004131936327_Added_FAQ_Category.resx">
+      <DependentUpon>202004131936327_Added_FAQ_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004132019092_Added_FAQ.resx">
+      <DependentUpon>202004132019092_Added_FAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004132314067_updated_FAQ.resx">
+      <DependentUpon>202004132314067_updated_FAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004132325229_updated_FAQ_Removed.resx">
+      <DependentUpon>202004132325229_updated_FAQ_Removed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121837253_add-hr.resx">
+      <DependentUpon>202004121837253_add-hr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004121933002_add-socialserviceclubs.resx">
+      <DependentUpon>202004121933002_add-socialserviceclubs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004131924055_Appointment_Staff.resx">
+      <DependentUpon>202004131924055_Appointment_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65524</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44309/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

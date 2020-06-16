@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<title>Rocco Restaurant|Contest Page</title> 
+	 <link rel="stylesheet" href="styles/guessnumber.css">
+	 <script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <script type="text/javascript" src="scripts/guessnumber.js"></script>
+</head> 
+
+<body> 
+<header>
+      <div class="container">
+        <div id="logo">
+          <a href="home.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <nav id="main-nav">
+          <ul id="menu">
+            <a href="about.html"><li>About</li></a>
+            <a href="menu.html"><li>Menu</li></a>
+            <a href="events.html"><li>Events</li></a>
+            <a href="#"><li>Locations</li></a>
+            <a href="giftcards.html"><li>Gift Card</li></a>
+            <a href="guessnumber.html"><li>Contest</li></a>  
+            <a href="careers.html"><li>Careers</li></a>
+            <a href="contactus.html"><li>Contact</li></a>
+            <a href="sitemap.html"><li>Site Map</li></a>
+          </ul>
+        </nav>
+     </div>
+    </header>
+	<main class="container">
+	<h1 id="main_title">Contest Page</h1>
+	<div id="box">
+		<div id="box1">
+			<h1 id="text">Guess The Number</h1> 
+			<p id="subtext">We have selected a random number between 1 - 10. 
+				See if you can guess it.</p> 
+			<div class="form"> 
+				<label for="guessField">Enter a guess: </label> 
+				<input type = "text" id = "guessField" class = "guessField"> </input>
+				<button  value = "Submit guess" class = "btn" id = "submitguess" onclick="startGame()">Submit</button>
+			</div> 
+		</div>
+		 <div id="box2">
+			<h1 id="text">You Lost</h1> 
+			<button  value = "Submit guess" class = "btn" id = "tryAgain" onclick="tryAgain()">Try again</button>
+		</div>
+	</div>
+	</main>
+    <footer class="container">
+      <div class="social-icons">
+        <a href="#"><img src="images/Instagram.png" alt=""></a>
+        <a href="#"><img src="images/Facebook.png" alt=""></a>
+        <a href="#"><img src="images/Twitter.png" alt=""></a>
+        <a href="#"><img src="images/WhatsApp.png" alt=""></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright. All Rights Reserved. 2019
+      </div>
+    </footer>
+  </body>
+</html>			 

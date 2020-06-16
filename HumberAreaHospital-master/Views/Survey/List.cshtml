@@ -1,0 +1,55 @@
+﻿@model HumberAreaHospitalProject.Models.ViewModels.ListSurvey
+
+@{
+    ViewBag.Title = "List";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>Select a question from the list to view the survey responses</h1>
+    <div>
+        <form method="post" action="/Survey/List">
+            <select name="id">
+                @{
+                    foreach (var question in Model.questions)
+                    {
+                        <option value="@question.QuestionID">@question.QuestionText</option>
+                    }
+
+                }
+
+            </select>
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </form>
+
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Answer</th>
+                <th scope="col">User</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var answer in Model.surveys)
+                {
+                    <tr>
+                        <td>@answer.ResponseText</td>
+                   
+                        <td>@answer.UserName</td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
